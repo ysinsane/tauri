@@ -564,15 +564,6 @@
           "type": "number",
           "format": "double"
         },
-        "pixelUnit": {
-          "description": "Pixel unit type. Effective to size and position related settings",
-          "default": "logical",
-          "allOf": [
-            {
-              "$ref": "#/definitions/PixelUnit"
-            }
-          ]
-        },
         "minWidth": {
           "description": "The min window width.",
           "type": [
@@ -675,6 +666,15 @@
             }
           ]
         },
+        "pixelUnit": {
+          "description": "Pixel unit type. Effective to size and position related settings",
+          "default": "logical",
+          "allOf": [
+            {
+              "$ref": "#/definitions/PixelUnit"
+            }
+          ]
+        },
         "hiddenTitle": {
           "description": "If `true`, sets the window title to be hidden on macOS.",
           "default": false,
@@ -720,7 +720,7 @@
       ]
     },
     "PixelUnit": {
-      "description": "Pixel unit type. Effective to size and position related settings",
+      "description": "Window pixel unit",
       "type": "string",
       "enum": [
         "logical",
