@@ -1,5 +1,20 @@
 # Changelog
 
+## \[0.12.0]
+
+- Readd the option to create an unfocused window via the `focused` method. The `focus` function has been deprecated.
+  - [4036e15f](https://www.github.com/tauri-apps/tauri/commit/4036e15f5af933bdc0d0913508b5103958afc143) feat(core): reimplement window initial focus flag, closes [#5120](https://www.github.com/tauri-apps/tauri/pull/5120) ([#5338](https://www.github.com/tauri-apps/tauri/pull/5338)) on 2022-10-08
+- Added `Runtime::show()`, `RuntimeHandle::show()`, `Runtime::hide()`, `RuntimeHandle::hide()` for hiding/showing the entire application on macOS.
+  - [39bf895b](https://www.github.com/tauri-apps/tauri/commit/39bf895b73ec6b53f5758815396ba85dda6b9c67) feat(macOS): Add application `show` and `hide` methods ([#3689](https://www.github.com/tauri-apps/tauri/pull/3689)) on 2022-10-03
+- - [7d9aa398](https://www.github.com/tauri-apps/tauri/commit/7d9aa3987efce2d697179ffc33646d086c68030c) feat: bump MSRV to 1.59 ([#5296](https://www.github.com/tauri-apps/tauri/pull/5296)) on 2022-09-28
+- Added methods to set the system tray title on macOS.
+  - [8f1ace77](https://www.github.com/tauri-apps/tauri/commit/8f1ace77956ac3477826ceb059a191e55b3fff93) feat: expose `set_title` for MacOS tray ([#5182](https://www.github.com/tauri-apps/tauri/pull/5182)) on 2022-09-30
+- Added the `user_agent` option when creating a window.
+  - [a6c94119](https://www.github.com/tauri-apps/tauri/commit/a6c94119d8545d509723b147c273ca5edfe3729f) feat(core): expose user_agent to window config ([#5317](https://www.github.com/tauri-apps/tauri/pull/5317)) on 2022-10-02
+- Add `pixelUnit`  configs to allow using of physical pixels as unit.
+  - [b1e73586](https://www.github.com/tauri-apps/tauri/commit/b1e73586a143fd8b2175d8092493f8d87f53df31) doc: add changes doc on 2022-10-10
+  - [58c51887](https://www.github.com/tauri-apps/tauri/commit/58c5188760e266a8e5b6b48d31a01e4223cf0c2b) feat: allow setting window size and position using physical units close [#5228](https://www.github.com/tauri-apps/tauri/pull/5228) on 2022-10-12
+
 ## \[0.11.1]
 
 - Add missing allowlist config for `set_cursor_grab`, `set_cursor_visible`, `set_cursor_icon` and `set_cursor_position` APIs.
